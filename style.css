@@ -1,9 +1,9 @@
-body {
+body{
   background-color: #fdf6f6;
   font-family: "Comic Sans MS", sans-serif;
 }
 
-.top {
+.top{
   border: 2px solid black;
   font-size: xx-large;
   text-align: center;
@@ -11,7 +11,10 @@ body {
   margin-bottom: 30px;
 }
 
-.bonshommes {
+
+/* BONSHOMMES */
+
+.bonshommes{
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -19,23 +22,25 @@ body {
   gap: 20px;
 }
 
-.bonhomme {
+.bonhomme{
+  --size: 150px;
+
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid black;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: var(--size);
+  height: var(--size);
   transition: transform 0.2s;
 }
 
-.bonhomme:hover {
+.bonhomme:hover{
   transform: scale(1.05);
 }
 
-.eye {
+.eye{
   position: relative;
   background-color: white;
   border-radius: 50%;
@@ -45,10 +50,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
 }
 
-.pupil {
+.pupil{
   position: absolute;
   width: 15px;
   height: 15px;
@@ -58,7 +62,18 @@ body {
 }
 
 /* Couleurs */
-.red { background-color: #ff7070; }
-.yellow { background-color: #ffed70; }
-.blue { background-color: #70a0ff; }
-.green { background-color: #70ff70; }
+.red{ background-color: #ff7070; }
+.yellow{ background-color: #ffed70; }
+.blue{ background-color: #70a0ff; }
+.green{ background-color: #70ff70; }
+
+/* Forme */
+.square{ border-radius: 0px; }
+.circle{ border-radius: 100%; }
+.triangle{
+  border-radius: 0px;
+  width: var(--size);
+  height: calc(var(--size) * 0.87);
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
