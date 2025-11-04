@@ -12,7 +12,7 @@ body{
 }
 
 
-/* BONSHOMMES */
+/* Bonshommes */
 .bonhomme{
   --size: 150px;
 
@@ -26,11 +26,11 @@ body{
   height: var(--size);
   transition: transform 0.2s;
 }
-
 .bonhomme:hover{
   transform: scale(1.05);
 }
 
+/* Eyes */
 .eye{
   position: relative;
   background-color: white;
@@ -49,13 +49,13 @@ body{
   height: 15px;
   background-color: black;
   border-radius: 50%;
-  transition: transform .2s, width .2s, height .2s;
 }
 .bonhomme:hover .pupil{
   width: 25px;
   height: 25px;
 }
 
+/* Mouth */
 .mouth{
   position: absolute;
   border-bottom-left-radius: 13px;
@@ -73,6 +73,35 @@ body{
   border-bottom-right-radius: 0px;
   width: 50px;
   height: 25px;
+}
+
+/* Sleeping */
+.sleep .eye {
+  background: none;
+  border-bottom: 3px solid black;
+  border-radius: 0;
+  height: 0;
+}
+
+.sleep .pupil {
+  opacity: 0;
+}
+
+.sleep .mouth{
+  border-radius: 50%;
+}
+
+/* Awaking */
+.awake .eye {
+  background: white;
+  border-radius: 50%;
+  height: 40px;
+  transition: all .5s;
+}
+
+.awake .pupil {
+  opacity: 1;
+  transition: all .2s, opacity .5s;
 }
 
 /* Couleurs */
