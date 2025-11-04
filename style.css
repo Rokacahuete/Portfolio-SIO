@@ -92,7 +92,8 @@ body{
   width: calc(var(--size) * 1.5);
 }
 .capsule{
-  height: calc(var(--size) * 1.5);
+  height: calc(var(--size) * 1.2);
+  width: calc(var(--size) / 1.2);
   border-radius: 100px;
 }
 .capsule>.eye{
