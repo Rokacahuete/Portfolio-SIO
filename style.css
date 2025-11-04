@@ -13,15 +13,6 @@ body{
 
 
 /* BONSHOMMES */
-
-.bonshommes{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
 .bonhomme{
   --size: 150px;
 
