@@ -36,23 +36,28 @@ document.addEventListener("visibilitychange", () => {
   const bonshommes = document.querySelectorAll(".bonhomme");
 
   if (document.hidden) {
-    // 💤 L'utilisateur quitte l'onglet → les bonshommes dorment
-    bonshommes.forEach(b => {
-      b.classList.remove("awake");
-      b.classList.add("sleep");
-    });
+    setFavicon(SLEEP_ICON);
   } else {
-    // 🕐 L'utilisateur revient → ils restent endormis 5s avant de se réveiller
     bonshommes.forEach(b => {
       b.classList.remove("awake");
       b.classList.add("sleep");
     });
 
     setTimeout(() => {
+      setFavicon(AWAKE_ICON);
+    }, 2_000);
+    setTimeout(() => {
       bonshommes.forEach(b => {
         b.classList.remove("sleep");
         b.classList.add("awake");
       });
-    }, 2_500);
+    }, 3_000);
   }
 });
+
+const AWAKE_ICON = "./Images/high-voltage.png", SLEEP_ICON = "./Images/Zzz.png";
+function setFavicon(path) {
+  let favicon = document.getElementById("dynamic-favicon");
+  favicon.href = path;
+}
+setFavicon(AWAKE_ICON);
