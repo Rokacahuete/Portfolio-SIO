@@ -1,8 +1,17 @@
+let hoveredBonhomme = null;
+document.querySelectorAll(".bonhomme").forEach(b => {
+  b.addEventListener("mouseenter", () => hoveredBonhomme = b);
+  b.addEventListener("mouseleave", () => hoveredBonhomme = null);
+});
+
 document.addEventListener("mousemove", (e) => {
   const PUPILS = document.querySelectorAll(".pupil");
   PUPILS.forEach(pupil => {
     const MAX_DISTANCE = 10;
     const ANGLE = 100;
+    
+    let bonhomme = pupil.closest(".bonhomme");
+    if (bonhomme === hoveredBonhomme) return pupil.style.transform = `translate(0px, 0px)`;
 
     let eye = pupil.parentElement;
     let rect = eye.getBoundingClientRect();

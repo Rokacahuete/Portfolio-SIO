@@ -58,7 +58,11 @@ body{
   height: 15px;
   background-color: black;
   border-radius: 50%;
-  transition: transform .2s;
+  transition: transform .2s, width .2s, height .2s;
+}
+.bonhomme:hover .pupil{
+  width: 25px;
+  height: 25px;
 }
 
 .mouth{
@@ -69,13 +73,15 @@ body{
   height: 15px;
   background-color: #ff4f4fa8;
   transform: translateY(40px);
-  transition: border-radius .2s;
+  transition: border-radius .2s, width .2s, height .2s;
 }
 .bonhomme:hover .mouth{
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  width: 50px;
+  height: 25px;
 }
 
 /* Couleurs */
