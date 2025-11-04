@@ -30,7 +30,7 @@ body{
   justify-content: center;
   align-items: center;
   border: 2px solid black;
-  border-radius: 50%;
+  border-radius: 20px;
   width: var(--size);
   height: var(--size);
   transition: transform 0.2s;
@@ -61,6 +61,14 @@ body{
   transition: transform 0.1s;
 }
 
+.mouth{
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  background-color: #ff4f4fa8;
+  transform: translateY(40px);
+}
+
 /* Couleurs */
 .red{ background-color: #ff7070; }
 .yellow{ background-color: #ffed70; }
@@ -68,12 +76,18 @@ body{
 .green{ background-color: #70ff70; }
 
 /* Forme */
-.square{ border-radius: 0px; }
-.circle{ border-radius: 100%; }
-.triangle{
-  border-radius: 0px;
-  width: var(--size);
-  height: calc(var(--size) * 0.87);
-  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+.square{
+}
+.circle{
+  border-radius: 50%;
+}
+.rectangle{
+  width: calc(var(--size) * 1.5);
+}
+.capsule{
+  height: calc(var(--size) * 1.5);
+  border-radius: 100px;
+}
+.capsule>.eye{
+  transform: translateY(calc(var(--size) / -5));
 }
