@@ -58,15 +58,24 @@ body{
   height: 15px;
   background-color: black;
   border-radius: 50%;
-  transition: transform 0.1s;
+  transition: transform .2s;
 }
 
 .mouth{
   position: absolute;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
   width: 30px;
   height: 15px;
   background-color: #ff4f4fa8;
   transform: translateY(40px);
+  transition: border-radius .2s;
+}
+.bonhomme:hover .mouth{
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 /* Couleurs */
@@ -76,8 +85,6 @@ body{
 .green{ background-color: #70ff70; }
 
 /* Forme */
-.square{
-}
 .circle{
   border-radius: 50%;
 }
