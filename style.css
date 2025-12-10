@@ -1,14 +1,69 @@
+@font-face {
+    font-family: 'copyduck';
+    src: url("./Fonts/Copyduck.ttf") format('truetype');
+}
+
+body::before{
+  background: url("Images/Background.png") no-repeat center center / cover;
+  filter: opacity(.5);
+  position: fixed;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 body{
   background-color: #fdf6f6;
   font-family: "Comic Sans MS", sans-serif;
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .top{
+  background-color: rgba(132, 0, 255, 0.438);
+  font-family: 'copyduck';
   border: 2px solid black;
-  font-size: xx-large;
+  font-size: 50px;
   text-align: center;
   width: 100%;
   margin-bottom: 30px;
+  padding-block: 20px;
+}
+
+.section{
+  background: linear-gradient(350deg, rgba(0, 0, 0, 0.247), rgba(145, 40, 230, 0.6), rgba(0, 0, 0, 0.247));
+  margin: 20px;
+  width: 90%;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+h1{
+  font-family: 'copyduck';
+  background-color: rgba(174, 0, 255, 0.274);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px 50px;
+}
+
+.text{
+  text-align: left;
+  padding-inline: 50px;
+}
+
+li{
+  font-weight: bold;
 }
 
 
@@ -25,6 +80,7 @@ body{
   width: var(--size);
   height: var(--size);
   transition: transform 0.2s;
+  margin: 20px 5px 5px 5px;
 }
 .bonhomme:hover{
   transform: scale(1.05);
